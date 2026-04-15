@@ -1,0 +1,32 @@
+﻿@model Blogger_Project.Models.Category
+
+@{
+    ViewData["Title"] = "Update Category";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-warning text-dark">
+                    <h4>Update Category</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="UpdateCategory" method="post">
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-warning">Update Category</button>
+                            <a class="btn btn-secondary mt-2" asp-action="FetchCategory">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

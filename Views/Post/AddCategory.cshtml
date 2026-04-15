@@ -1,0 +1,30 @@
+﻿@model Blogger_Project.Models.Category
+
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h4>Add New Category</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddCategory" method="post">
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Save Category</button>
+                            <a class="btn btn-secondary mt-2" asp-action="FetchCategory">Back to List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
